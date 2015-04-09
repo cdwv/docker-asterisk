@@ -1,6 +1,6 @@
 FROM centos:6.6
 MAINTAINER Andrzej WP <andrzej@codewave.pl>
-RUN yum -y install dnsmasq yum-utils
+RUN yum -y install dnsmasq yum-utils sox
 RUN yum -y update
 
 ADD http://packages.digium.com/centos/centos-digium.repo /etc/yum.repos.d/
