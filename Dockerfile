@@ -5,11 +5,11 @@ RUN yum -y update
 
 ADD http://packages.digium.com/centos/centos-digium.repo /etc/yum.repos.d/
 ADD http://packages.asterisk.org/centos/centos-asterisk.repo /etc/yum.repos.d/
-ADD http://packages.asterisk.org/centos/centos-asterisk-13.repo /etc/yum.repos.d/
-ADD http://packages.digium.com/centos/centos-digium-13.repo /etc/yum.repos.d/
+ADD http://packages.asterisk.org/centos/centos-asterisk-11.repo /etc/yum.repos.d/
+ADD http://packages.digium.com/centos/centos-digium-11.repo /etc/yum.repos.d/
 
-RUN yum-config-manager --enable digium-13
-RUN yum-config-manager --enable asterisk-13
+RUN yum-config-manager --enable digium-11
+RUN yum-config-manager --enable asterisk-11
 
 RUN yum -y update
 
