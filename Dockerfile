@@ -2,6 +2,8 @@ FROM centos:6.6
 MAINTAINER Andrzej WP <andrzej@codewave.pl>
 RUN yum -y install dnsmasq yum-utils sox
 RUN yum -y update
+RUN rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+RUN yum -y install fail2ban
 
 ADD http://packages.digium.com/centos/centos-digium.repo /etc/yum.repos.d/
 ADD http://packages.asterisk.org/centos/centos-asterisk.repo /etc/yum.repos.d/
